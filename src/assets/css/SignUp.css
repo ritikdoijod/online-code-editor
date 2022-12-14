@@ -1,0 +1,221 @@
+* {
+    --bg-test-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dark-1 {
+    background: none;
+}
+
+.bg {
+    height: 100vh;
+    background: linear-gradient(to right, #ff00cc, #333999);
+    padding: 0;
+    /* display: flex; */
+    /* justify-content: left; */
+    /* z-index: 0; */
+}
+
+.card-container {
+    width: 80%;
+    align-self: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.wrapper {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin: 0 auto;
+    width: 55%;
+    min-width: 50rem;
+    border-radius: 0.5rem;
+    position: relative;
+    background: url("../images/layered-waves-haikei.svg") no-repeat var(--bg-test-color);
+    background-size: cover;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    inset: 0;
+    transform: rotate(-3deg);
+    border-radius: 0.5rem;
+    z-index: -1;
+}
+
+.card-logo {
+    font-size: 5rem;
+}
+
+.card-header h1 {
+    margin: 0;
+}
+
+.card-logo,
+.card-header,
+.card-footer {
+    text-align: center;
+}
+
+.card-header {
+    float: left;
+    width: 100%;
+    display: flex;
+}
+
+.btn-wrapper {
+    margin: 1rem 0 0 2rem;
+    width: 17%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header h1 {
+    font-size: 2rem;
+}
+
+
+.form-container {
+    float: left;
+    width: 50%;
+}
+
+.form {
+    margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.15rem;
+    border-radius: 100px;
+}
+
+.form-item-icon {
+    opacity: 0.4;
+}
+
+.form-item {
+    position: relative;
+}
+
+.form-item input {
+    position: absolute;
+    left: 0;
+    right: 1.25rem;
+    top: 0;
+    bottom: 0;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0 0 0 4rem;
+    font-size: 1.15rem;
+}
+
+.submit-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: 1rem;
+    border-radius: 100px;
+}
+
+.form .submit-btn:hover {
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.5);
+    text-align: justify;
+    border-radius: 0.5rem;
+}
+
+.success {
+    background-color: rgba(0, 255, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footer {
+    padding: 0 2.5rem;
+    text-align: left;
+}
+
+.design-container {
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    clear: left;
+    display: flex;
+    width: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+
+.card-header button {
+    float: left;
+    padding: 0 0 0.2rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.card-header button:enabled  {
+    border-bottom: 2px solid #ff00cc;
+}
+
+.card-header button:hover {
+    color: #ff00cc;
+}
+
+.card-header button:disabled {
+    color: rgba(255, 0, 204, 0.5);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgba(141, 0, 117, 0.95);
+    /* -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0) inset; */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.eye-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.5rem;
+    background: none;
+    border: none;
+}

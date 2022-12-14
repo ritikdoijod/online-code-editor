@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Authentication from "./components/Authentication";
+import SignUp from "./components/SignUp"
+import { AuthContext } from "./contexts/auth";
+import { useContext } from "react";
+import Editor from './components/Editor';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { isLoggedIn, userId, token } = useContext(AuthContext);
+
+    const routes = isLoggedIn ? (
+        <>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/user/profile/" element={<SignUp />} />
+        </>
+    ) : (
+        <>
+            <Route path="/" exact element={<Home />} />
+            {/* <Route path="/authentication" exact element={<Authentication />} /> */}
+            <Route path='/editor' exact element={<Editor />} /> 
+        </>
+    );
+
+    return (
+        <div className="App">
+            <Routes>
+                {routes}
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

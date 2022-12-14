@@ -1,0 +1,173 @@
+.sidebar {
+    margin: 0.5rem;
+    position: relative;
+    background: var(--bg-test-color);
+    border-radius: 0.35rem;
+    min-width: 13rem;
+}
+
+.logo-content {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #818181;
+}
+
+.logo-content .logo {
+    display: flex;
+    font-size: 1.25rem;
+}
+
+.logo-icon {
+    align-self: center;
+    margin-right: 1rem;
+    display: block;
+}
+
+.logo-name {
+    font-weight: bold;
+}
+
+#menu-btn {
+    padding: 0 0 0 2rem;
+    font-size: 1rem;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+#menu-btn .menu-btn-icon {
+    display: block;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.nav-list li {
+    margin: 1rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.35rem;
+    background: rgba(255, 255, 255, 0.2);
+    list-style: none;
+}
+
+.links {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.links-icon {
+    font-size: 1.25rem;
+    display: block;
+}
+
+.links span {
+    margin-left: 1rem;
+}
+
+.nav-list li:hover {
+    background: var(--bg-test-color);
+}
+
+.profile-content {
+    padding: 0.3rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    color: #000000;
+    border-radius: 5rem;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 2.25rem;
+    border-radius: 100%;
+}
+
+.profile-details .name {
+    padding: 0 0 0 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/*collapsed-sidebar styling*/
+.sidebar-mini {
+    margin: 0.5rem;
+    position: relative;
+    background: var(--bg-test-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.sidebar-mini .logo-content {
+    display: flex;
+    justify-content: center;
+    min-width: 2.25rem;
+}
+
+.sidebar-mini .logo-content #menu-btn {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-list__mini {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list__mini li {
+    padding: 0.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list__mini li:hover {
+    background: var(--bg-test-color);
+}
+
+.nav-list__mini .links {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-mini .profile-content {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-mini .profile-content .profile .profile-image img {
+    width: 2.25rem;
+}
+
+
+/*hide-class*/
+.hide {
+    display: none;
+}
